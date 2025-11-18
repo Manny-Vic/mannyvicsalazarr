@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
 
-/* ===== GLOBAL STYLES ===== */
+/* ===== GLOBAL ===== */
 * {
     margin: 0;
     padding: 0;
@@ -12,6 +12,7 @@
 }
 
 html {
+    scroll-behavior: smooth;
     font-size: 62.5%;
 }
 
@@ -45,25 +46,45 @@ header {
     cursor: pointer;
     transition: 0.5s ease;
 }
-
 .logo:hover {
     transform: scale(1.1);
 }
-
 nav a {
     font-size: 1.8rem;
     color: white;
     margin-left: 4rem;
-    font-weight: 500;
-    transition: 0.3s ease;
-    border-bottom: 3px solid transparent;
+    position: relative;
+    text-decoration: none;
+    padding-bottom: 4px;
+    transition: color 0.3s;
 }
 
-nav a:hover,
-nav a.active {
-    color: #b74b4b;
-    border-bottom: 3px solid #b74b4b;
+/* Cool animated underline */
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0%;
+    height: 3px;
+    background: #b74b4b;
+    transition: width 0.3s ease;
+    border-radius: 3px;
+    height: 3px;  /* change to 2px, 4px, or 5px */
 }
+
+/* Hover + Active */
+nav a:hover,
+nav a.hover {
+    color: #b74b4b;
+}
+
+nav a:hover::after,
+nav a.hover::after {
+    width: 100%;
+}
+
+
 
 /* ===== HERO SECTION ===== */
 .hero {
@@ -75,13 +96,12 @@ nav a.active {
     padding: 5rem 9%;
     min-height: 100vh;
 }
-
 .hero-content {
     max-width: 50%;
 }
 
 .hero-content h1 {
-    font-size: 6rem;
+    font-size: 4rem;
     font-weight: 700;
     line-height: 1.3;
 }
@@ -91,18 +111,16 @@ nav a.active {
     margin-bottom: 1rem;
     font-weight: 700;
 }
-
-.hero-content p {
-    font-size: 1.6rem;
-    margin-top: 1rem;
-    margin-bottom: 2rem;
-}
-
 span {
     color: #b74b4b;
 }
 
-/* Social Icons */
+.hero-content p {
+    font-size: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+/* Socials */
 .social-icons a {
     display: inline-flex;
     justify-content: center;
@@ -124,7 +142,6 @@ span {
     background-color: #b74b4b;
     box-shadow: 0 0 25px #b74b4b;
 }
-
 /* Button */
 .btn {
     display: inline-block;
@@ -146,8 +163,7 @@ span {
     color: black;
     box-shadow: 0 0 25px #b74b4b;
 }
-
-/* Hero Image */
+/* Image */
 .hero-image {
     border-radius: 50%;
     flex-shrink: 0;
@@ -166,7 +182,6 @@ span {
     transform: scale(1.05);
 }
 
-/* ===== TYPING ANIMATION ===== */
 .typing-text {
     font-size: 3.4rem;
     font-weight: 600;
@@ -201,11 +216,11 @@ span {
 }
 
 @keyframes words {
-    0%, 20% { content: "Web Developer"; }
+    0%, 20% { content: "AI Engineer"; }
     21%, 40% { content: "Developer"; }
-    41%, 60% { content: "Web Designer"; }
+    41%, 60% { content: "Copywriter"; }
     61%, 80% { content: "Youtuber"; }
-    81%, 100% { content: "Script Writer"; }
+    81%, 100% { content: "Video Editor"; }
 }
 
 /* ===== RESPONSIVE DESIGN ===== */
@@ -238,4 +253,336 @@ span {
         width: 70vw;
         margin-top: 4rem;
     }
+}
+
+/* ===== ABOUT SECTION ===== */
+
+.about-section {
+    padding: 60px 80px;
+    background-color: #000;
+}
+
+.about-title {
+    font-size: 48px;
+    font-weight: 800;
+}
+
+.highlight {
+    color: #b74b4b;
+}
+
+.underline {
+    width: 80px;
+    height: 4px;
+    background-color: #b74b4b;
+    margin: 10px 0 40px 0;
+}
+
+.about-container {
+    display: flex;
+    gap: 40px;
+}
+
+/* LEFT SIDE */
+.about-left {
+    width: 55%;
+    line-height: 1.8;
+    font-size: 17px;
+}
+
+/* RIGHT SIDE */
+.about-right {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.about-card {
+    background: #1b1b1b;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #2a2a2a;
+    margin-top: 1.2em;
+}
+.about-card {
+    background: #1b1b1b;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #2a2a2a;
+    margin-top: 1.2em;
+    margin-left: 1.2em;
+}
+
+.about-card {
+  background: #1e1e1e;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+
+.about-card:hover {
+  box-shadow: 0 0 18px #b74b4b, 
+              0 0 30px rgba(183, 75, 75, 0.3);
+  transform: translateY(-5px);
+}
+
+
+
+.card-title {
+    font-size: 26px;
+    font-weight: 700;
+    color: #b74b4b;
+}
+
+/* Highlight bold text */
+b {
+    color: #b74b4b;
+}
+
+/* ===== RESPONSIVE ABOUT ===== */
+@media (max-width: 995px) {
+    .about-container {
+        flex-direction: column;
+    }
+    .about-left,
+    .about-right {
+        width: 100%;
+    }
+
+    /* ===== EDUCATION SECTION ===== */
+.education-section {
+    padding: 80px 9%;
+    background-color: #0f0f0f;
+    color: white;
+}
+
+.section-title {
+    font-size: 48px;
+    font-weight: 800;
+}
+
+.education-container {
+    display: flex;
+    gap: 50px;
+    margin-top: 40px;
+}
+
+/* LEFT TEXT */
+.education-left {
+    width: 55%;
+    font-size: 1.8rem;
+    line-height: 1.8;
+}
+
+/* RIGHT CARD COLUMN */
+.education-right {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* CARD BASE STYLE */
+.education-card {
+    background-color: #1b1b1b;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #2a2a2a;
+}
+
+/* CARD TITLE */
+.edu-title {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #b74b4b;
+}
+/* ===== EDUCATION STYLES ===== */
+/* Reuse your variables defined earlier (if you added :root) */
+
+.degree-card {
+  background: #0f0f0f;
+  padding: var(--card-pad, 2.4rem);
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.04);
+  display: flex;
+  justify-content: space-between;
+  gap: var(--gap);
+  align-items: flex-start;
+}
+
+.date-pill {
+  display:inline-block;
+  padding:0.6rem 1rem;
+  border-radius:999px;
+  background: var(--pill-bg, rgba(35,22,22,0.6));
+  color: var(--accent, #b74b4b);
+  border: 1px solid rgba(255,255,255,0.04);
+  font-weight: 700;
+}
+
+.cert {
+  background: #0f0f0f;
+  padding: calc(var(--card-pad, 2rem) - 0.4rem);
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.04);
+}
+
+.cert-title { font-weight: 700; color: var(--accent, #b74b4b); }
+.small-pill { padding: 0.45rem 0.8rem; font-size: 0.86rem; border-radius:999px; }
+
+/* Responsive education: single-column on small screens */
+@media (max-width: 995px) {
+  .degree-card { flex-direction: column; }
+  .cert-grid { grid-template-columns: 1fr; }
+}
+
+.muted {
+  font-size: 3.1rem;
+}
+
+/* ===== EDUCATION SECTION ===== */
+.education-section {
+    padding: 80px 9%;
+    background-color: black;
+    color: white;
+    margin-top: 60px;
+}
+
+.education-title {
+    font-size: 4.8rem;
+    font-weight: 800;
+}
+
+.education-section .underline {
+    width: 100px;
+    height: 4px;
+    background: #b74b4b;
+    margin: 10px 0 40px 0;
+}
+
+/* Education Cards Grid */
+.education-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+/* Single Card */
+.education-card {
+    background-color: #1b1b1b;
+    padding: 25px;
+    border-radius: 14px;
+    border: 1px solid #2a2a2a;
+    transition: 0.3s ease;
+}
+
+.education-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px #b74b4b50;
+}
+
+/* Card Title */
+
+
+.edu-degree {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #b74b4b;
+    margin-bottom: 10px;
+}
+
+/* School */
+.edu-school {
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+
+/* Dates */
+.edu-date {
+    font-size: 1.4rem;
+    color: #c9c9c9;
+    margin-bottom: 12px;
+}
+
+/* Description */
+.edu-desc {
+    font-size: 1.6rem;
+    line-height: 1.6;
+}
+
+/* ===== EDUCATION SECTION ===== */
+.education-section {
+    padding: 80px 9%;
+    background-color: black;
+    color: white;
+    margin-top: 60px;
+}
+
+.education-title {
+    font-size: 4.8rem;
+    font-weight: 800;
+}
+
+.education-section .underline {
+    width: 100px;
+    height: 4px;
+    background: #b74b4b;
+    margin: 10px 0 40px 0;
+}
+
+/* Education Cards Grid */
+.education-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+/* Single Card */
+.education-card {
+    background-color: #1b1b1b;
+    padding: 25px;
+    border-radius: 14px;
+    border: 1px solid #2a2a2a;
+    transition: 0.3s ease;
+}
+
+.education-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px #b74b4b50;
+}
+
+/* Card Title */
+.edu-degree {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #b74b4b;
+    margin-bottom: 10px;
+}
+
+/* School */
+.edu-school {
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+
+/* Dates */
+.edu-date {
+    font-size: 1.4rem;
+    color: #c9c9c9;
+    margin-bottom: 12px;
+}
+
+/* Description */
+.edu-desc {
+    font-size: 1.6rem;
+    line-height: 1.6;
+}
+
+
 }
