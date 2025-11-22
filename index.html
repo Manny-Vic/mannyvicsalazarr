@@ -11,12 +11,12 @@
 </head>
 <body>
     <header>
-    <a href="#home" class="logo">Manny Vic</a> 
+    <a href="#home" class="logo">Manny</a> 
     <nav>
         <a href="#home" class="active">Home</a>
         <a href="#about">About</a>
         <a href="#education">Education</a>
-        <a href="#skills">Skills</a>
+        <a href="#achievements">Achievements</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
     </nav>
@@ -28,7 +28,10 @@
     <section class="hero">
         <div class="hero-content">
             <h1>Hi, I'm <span>Manny Vic Salazar</span></h1>
-            <h3 class="typing-text">I'm a <span></span></h3>
+           <h1 class="typing-title">
+    I’m a <span class="typing-words"></span>
+</h1>
+
             <p>A student focusing on mastering <b>software engineering and Artificial Intelligence.</b> Turning ideas into impactful, data driven solutions that solve real world problems and deliver measurable results.</p>
 
             <div class="social-icons">
@@ -48,13 +51,14 @@
                     <i class="fa-brands fa-instagram"></i>
                 </a>
             </div>
+            
 
 
             <a href="#" class="btn">Hire Me</a>
         </div>
 
         <div class="hero-image">
-            <img src="576658612_1487162479048704_5101786188742600146_n.jpg"</div>
+            <img src="https://scontent.fmnl3-1.fna.fbcdn.net/v/t39.30808-6/472756980_1267535217678099_5451888938765223493_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeGHJ_fLFae8jMyABP8WIS83YFDCV71ymWtgUMJXvXKZa9chix86yjgjkLaq56magd_oZAlTjafKAtME_4TUY_ts&_nc_ohc=ivfehem7hlwQ7kNvwHWLobR&_nc_oc=Adl9m1FOpmTFfRkHxMDnChNrD_O1zxBduAorTCV5ach1-z62uY6aDVQBkJZmmdN-OQaWbeK4hye0xMdZBH8KcIJJ&_nc_zt=23&_nc_ht=scontent.fmnl3-1.fna&_nc_gid=ZWfOLImCeb25ggFMYQXt6A&oh=00_AfiiVO7qmyzesCkQAWZ2bkbF_QrRtH_RlsHAie1HnbYtpA&oe=6921809C"</div>
     </section>
 
     <!-- ===== ABOUT SECTION ===== -->
@@ -97,41 +101,118 @@
 <section id="education" class="about-section">
   <div class="container">
     <!-- Title row -->
-    <h2 class="about-title">Education &amp; <span class="highlight">Certifications</span></h2>
+    <h2 class="about-title">Education <span class="highlight"></span></h2>
     <p style="font-size:2em;">Continuous learning and professional development journey</p>
     <div class="underline"></div>
 
     <!-- Degrees (two large cards stacked, adjust spacing with --gap) -->
         <div class="degrees" style="display:flex;flex-direction:column;gap:var(--gap);margin-top:1.2rem;">
         <!-- Degree 1 -->
-        <div class="about-card" style="font-size:1.5em;">
-        <h3 class="card-title">Bachelor of Science in Computer Science</h3> 
-        <p> University of the Cordilleras</p> 
-        <p>Focus on software engineering, algorithms, and data structures </p>
-        </div>
+       <article class="education-card bg-uc">
+        <h3 class="edu-degree">Bachelor of Science in Computer Science</h3>
+        <div class="edu-school">University of the Cordilleras</div>
+        <p class="edu-desc">Focus on software engineering, algorithms, and data structures.</p>
+        </article>
+
 
       <!-- Degree 2 -->
-       <div class="about-card" style="font-size:1.5em;">
-        <h3 class="card-title">High School & Senior High School</h3>
-        <p> Pangasinan School of Arts and Trades & PHINMA University of Pangasinan</p>
-        <p>CSS & STEM</p>
-        </div>
-
-     <!-- Degree 3 -->
-
-           <div class="about-card" style="font-size:1.5em;">
-        <h3 class="card-title">Grade School</h3>
-        <p>Biec Elementary School</p>
-        <p>Best in Math, English, Science. consistent honor student</p>
-        </div>
+         <article class="education-card upang">
+        <h3 class="edu-degree">High Schoo & Senior High School</h3>
+        <div class="edu-school"> Pangasinan School of Arts and Trades & PHINMA University of Pangasinan</div>
+        <p class="edu-desc">CSS & STEM</p>
+        </article>
 
     
-    <!-- Certifications grid -->
+
+     <!-- Degree 3 -->
+         <article class="education-card BIEC">
+        <h3 class="edu-degree">Grade School</h3>
+        <div class="edu-school"> Biec Elementary School </div>
+        <p class="edu-desc">consistent honor student</p>
+        </article>
+    
+   
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <link rel="stylesheet" href="achievements.css" />
+</head>
+<body>
+
+    <section id="achievements" class="achievements-section">
+        <h2 class="achievements-title">Achievements</h2>
+         <p style="font-size:2em;">Turning Curiosity into Code: A Story of Growth, Exploring, and AI Mastery</p>
+        <div class="underline"></div>
+
+        <div class="timeline">
+
+<!-- Timeline Item 1 -->
+<div class="timeline-item">
+    <div class="timeline-content bg-grade">
+        <h3 class="timeline-title">Grade School</h3>
+        <p class="timeline-date">2012 - 2018</p>
+        <p class="timeline-desc">
+            I was a consistent honor student throughout my elementary years and actively represented my school in chess, badminton, damath, and science quiz competitions. I was recognized as Best in Math and Best in English, and I also participated regularly in Boy Scouts. there may be a lot more but that's all i remember.
+        </p>
+    </div>
+</div>
+
+<!-- Timeline Item 2 -->
+<div class="timeline-item">
+    <div class="timeline-content bg-highschool">
+        <h3 class="timeline-title">High School</h3>
+        <p class="timeline-date">2018 - 2024</p>
+        <p class="timeline-desc">
+            In high school, I began learning programming, starting with HTML and CSS in 9th grade. Since then, I have continued studying other programming languages and developing personal projects. Although I became more focused on coding and occasionally neglected my academic studies, I still maintained high grades. However, I often fell just short of reaching a 90 overall average required for top ranking  achieving above 90 in one or two quarters, but not consistently enough to qualify. Even so, I allowed the results to play out naturally, prioritizing my growth in programming.
+        </p>
+    </div>
+</div>
+
+<!-- Timeline Item 3 -->
+<div class="timeline-item">
+    <div class="timeline-content bg-youtube1">
+        <h3 class="timeline-title">Started a YouTube Channel</h3>
+        <p class="timeline-date">2019 - Present</p>
+        <p class="timeline-desc">
+            Started sharing editing and content creation, have reached over half a million views and 10k views and have grown a community up to 100k members but got deleted due to community standards    
+        </p>
+    </div>
+</div>
+
+<!-- Timeline Item 4 -->
+<div class="timeline-item">
+    <div class="timeline-content bg-aijourney">
+        <h3 class="timeline-title">AI Journey</h3>
+        <p class="timeline-date">2024 - Present</p>
+        <p class="timeline-desc">
+            I began my AI journey in 2024, starting completely from scratch. I spent a significant amount of time researching how AI works and how to use it effectively in real world projects. I enrolled in multiple online courses that covered AI fundamentals, prompt engineering, and practical application workflows. Through consistent study and experimentation, I learned how to integrate AI into my development process, use it to optimize code, generate ideas, and accelerate project building. This structured learning path allowed me to develop a strong foundation in AI assisted development
+        </p>
+    </div>
+</div>
+
+<!-- Timeline Item 5 -->
+<div class="timeline-item">
+    <div class="timeline-content bg-firstapp">
+        <h3 class="timeline-title">First App</h3>
+        <p class="timeline-date">2025</p>
+        <p class="timeline-desc">
+             I built my first application a financial tracker by combining online learning resources with AI assisted development. I began by studying tutorials, documentation, and sample projects to understand interface design, data handling, and basic CRUD functions. I then used AI tools as leverage to clarify concepts, debug issues, and refine both the structure and code of the app. AI also helped me explore different approaches, optimize functions, and speed up the development process. Through this mix of self learning and AI assistance, I successfully created a functional financial tracker that strengthened my confidence in building real world applications
+        </p>
+    </div>
+</div>
+
+
+            <!-- Certifications grid -->
     <div class="certs-header" style="margin-top:2.2rem;">
       <h4 style="font-size:4.2rem;margin-bottom:8px;">Certifications</h4>
       <div class="cert-grid" style="display:grid;grid-template-columns:repeat(2,1fr);gap:var(--gap);margin-top:12px;">
         <!-- cert 1 -->
         <div class="about-card" style="font-size:1.5em;">
+            <img src="C:\Users\LENOVO\Downloads\cs50.png" class="achievement-img" alt="Achievement Image">
         <h3 class="card-title">CS50: introduction to Computer Science</h3>
         <p>HarvardX</p>
         <p><b>2023</b></p>
@@ -161,13 +242,15 @@
         <h3 class="card-title">Machine Learning and Artificial Intelligence with Python</h3>    
         <p>HarvardX</p>
        <p><b>Ongoing - 2026</b></p>
+        </div>    
+
+
         </div>
+    </section>
 
+</body>
+</html>
 
-      </div>
-    </div>
-  </div>
-</section>
 
 </body>
 </html>
