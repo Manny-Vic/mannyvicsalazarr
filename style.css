@@ -467,7 +467,7 @@ span { color: #b74b4b; }
 }
 
 /* ==== IMAGE BACKGROUNDS FOR EACH CARD ==== */
-.bg-grade { background-image: url("https://images-porsche.imgix.net/-/media/?w=2560&h=697&q=45&crop=faces%2Centropy%2Cedges&auto=format"); }
+.bg-grade { background-image: url("IMG_4388.jpg"); }
 .bg-highschool { background-image: url("https://images-porsche.imgix.net/-/media/BD4E268AA80B42189F1A77EA7877D013_31037AE93CED4AB98374AF8A778DCCDB_CZ26W10IX0010-911-turbo-s-side?w=2560&h=697&q=45&crop=faces%2Centropy%2Cedges&auto=format"); }
 .bg-youtube1 { background-image: url("Screenshot_20251122_142518_YouTube.jpg"); }
 .bg-aijourney { background-image: url("img/achievement4.jpg"); }
